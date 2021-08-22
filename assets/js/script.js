@@ -15,8 +15,8 @@ var highscoreInputName = document.getElementById("initials");
 var submitScoreBtn = document.getElementById("sScore");
 var highscoreContainer = document.getElementById("hSContainer");
 var highscoreDiv = document.getElementById("hSPage");
-var highscoreDisplayName = document.getElementById("hSInitials");
-var highscoreDisplayScore = document.getElementById("hScore");
+var highscoreName = document.getElementById("hSInitials");
+var highscore = document.getElementById("hScore");
 var endGameBtns = document.getElementById("finalBtns");
 //Questions
 var quizQuestions = [{
@@ -130,16 +130,16 @@ submitScoreBtn.addEventListener("click", function highscore(){
 });
 // clears scores from storage
 function generateHighscores(){
-    highscoreDisplayName.innerHTML = "";
-    highscoreDisplayScore.innerHTML = "";
+    highscoreName.innerHTML = "";
+    highscore.innerHTML = "";
     var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
     for (i=0; i<highscores.length; i++){
         var newNameSpan = document.createElement("li");
         var newScoreSpan = document.createElement("li");
         newNameSpan.textContent = highscores[i].name;
         newScoreSpan.textContent = highscores[i].score;
-        highscoreDisplayName.appendChild(newNameSpan);
-        highscoreDisplayScore.appendChild(newScoreSpan);
+        highscoreName.appendChild(newNameSpan);
+        highscore.appendChild(newScoreSpan);
     }
 }
 // display for scores

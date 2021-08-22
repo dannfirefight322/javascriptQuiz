@@ -1,0 +1,21 @@
+*{
+    background-color: black;
+    color: white;
+}
+#quiz {
+    display: none;
+}
+
+#result {
+    display: none;
+}
+
+#gO {
+    display: none;
+}
+#finalBtns{
+    display: none;
+}
+#hSContainer{
+    display: none;
+}
